@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Fit — your AI personal stylist</title>
+  <meta name="description" content="The Fit curates complete head-to-toe outfits matched to your taste. Swipe, save, and shop every piece at an economical or premium price point. Launching first in the UAE." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧥</text></svg>" />
+  <style>
+    :root {
+      --bg: #FAF8F5; --card: #FFFFFF; --ink: #1A1A1A; --ink-soft: #6B6560;
+      --line: #E8E2DA; --accent: #B4654A; --accent-soft: #F4E6DF; --gold: #B99A5B;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 28px 0 0; }
+    .brand {
+      font-size: 15px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .hero { padding: 72px 0 56px; }
+    h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.12; font-weight: 700; letter-spacing: -0.5px; }
+    .hero p.lede { margin-top: 20px; font-size: 19px; color: var(--ink-soft); max-width: 560px; }
+    .cta-row { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-block; background: var(--ink); color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 14px;
+    }
+    .btn:hover { background: var(--accent); }
+    .cta-note { font-size: 13px; color: var(--ink-soft); }
+    .badge {
+      display: inline-block; background: var(--accent-soft); color: var(--ink);
+      border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; margin-bottom: 18px;
+    }
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+    .step { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+    .step .n {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 30px; height: 30px; border-radius: 999px; background: var(--accent-soft);
+      color: var(--accent); font-weight: 700; font-size: 14px; margin-bottom: 12px;
+    }
+    .step h3 { font-size: 16px; margin-bottom: 6px; }
+    .step p { font-size: 14px; color: var(--ink-soft); }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .tier { border-radius: 20px; padding: 24px; border: 1px solid var(--line); background: var(--card); }
+    .tier.high { border-color: var(--gold); }
+    .tier h3 { font-size: 16px; margin-bottom: 6px; }
+    .tier p { font-size: 14px; color: var(--ink-soft); }
+    .aesthetics { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 16px; font-size: 14px; color: var(--ink);
+    }
+    footer { border-top: 1px solid var(--line); padding: 32px 0 48px; font-size: 13px; color: var(--ink-soft); }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer .links { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><div class="brand">The Fit</div></header>
+
+    <div class="hero">
+      <div class="badge">Launching first in the UAE 🇦🇪</div>
+      <h1>Your AI personal stylist.<br />Whole outfits, not just pieces.</h1>
+      <p class="lede">
+        The Fit curates complete head-to-toe looks matched to your taste. Swipe through
+        outfits styled for you, save the ones you love, and shop every piece — at an
+        economical or a premium price point, from retailers you already trust.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:hello@thefit.style?subject=Waitlist&body=Count%20me%20in%20for%20early%20access.">Join the waitlist</a>
+        <span class="cta-note">Early access · iOS first · English, UAE launch</span>
+      </div>
+    </div>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><h3>Tell us your taste</h3><p>Pick the aesthetics and occasions you dress for — or just start swiping and we learn as you go.</p></div>
+        <div class="step"><span class="n">2</span><h3>Swipe complete looks</h3><p>Every card is a full outfit — top to shoes to accessories — styled by our AI to real fashion principles.</p></div>
+        <div class="step"><span class="n">3</span><h3>Shop at your price</h3><p>Each piece comes in two tiers. Toggle any item between economical and high-end and check out at the retailer.</p></div>
+        <div class="step"><span class="n">4</span><h3>Recreate any look</h3><p>Photo of an outfit you love? Upload it and The Fit rebuilds it from real, shoppable products.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Two price points, one look</h2>
+      <div class="tiers">
+        <div class="tier"><h3>Economical</h3><p>High-street and accessible brands — the whole outfit without the designer bill.</p></div>
+        <div class="tier high"><h3>High-end</h3><p>Designer and luxury equivalents of every piece, for when the moment calls for it.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Styled to your aesthetic</h2>
+      <div class="aesthetics">
+        <span class="chip">Old Money</span><span class="chip">Streetwear</span>
+        <span class="chip">Minimalist</span><span class="chip">Casual Everyday</span>
+        <span class="chip">Coquette</span><span class="chip">K-Fashion</span>
+        <span class="chip">Modest</span><span class="chip">Festive &amp; Occasion</span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+        <a href="mailto:hello@thefit.style">Contact</a>
+      </div>
+      <div>© 2026 The Fit. All rights reserved. Shopping links on The Fit may earn us a commission — see our <a href="disclosure.html">affiliate disclosure</a>.</div>
+    </footer>
+  </div>
+</body>
+</html>
