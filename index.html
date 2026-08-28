@@ -6,60 +6,75 @@
   <title>The Fit — your AI personal stylist</title>
   <meta name="description" content="The Fit curates complete head-to-toe outfits matched to your taste. Swipe, save, and shop every piece at an economical or premium price point. Launching first in the UAE." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧥</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" />
   <style>
     :root {
-      --bg: #FAF8F5; --card: #FFFFFF; --ink: #1A1A1A; --ink-soft: #6B6560;
-      --line: #E8E2DA; --accent: #B4654A; --accent-soft: #F4E6DF; --gold: #B99A5B;
+      --bg: #F5EFE0; --card: #FCF7EA; --ink: #14251F; --ink-soft: #5A6A5F;
+      --line: rgba(20,37,31,0.14); --accent: #013E37; --gold: #B98F4E;
+      --gold-bright: #E9C687; --cream: #F5EFE0;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Manrope", system-ui, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: var(--bg); color: var(--ink);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: var(--sans);
       line-height: 1.6; -webkit-font-smoothing: antialiased;
     }
     .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
     header { padding: 28px 0 0; }
     .brand {
-      font-size: 15px; font-weight: 700; letter-spacing: 4px;
-      text-transform: uppercase; color: var(--accent);
+      font-family: var(--serif); font-size: 20px; font-weight: 600;
+      letter-spacing: 5px; text-transform: uppercase; color: var(--ink);
     }
     .hero { padding: 72px 0 56px; }
-    h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.12; font-weight: 700; letter-spacing: -0.5px; }
-    .hero p.lede { margin-top: 20px; font-size: 19px; color: var(--ink-soft); max-width: 560px; }
-    .cta-row { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    h1 { font-family: var(--serif); font-size: clamp(38px, 7vw, 58px); line-height: 1.08; font-weight: 500; }
+    .hero p.lede { margin-top: 20px; font-size: 18px; color: var(--ink-soft); max-width: 560px; }
+    .cta-row { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
     .btn {
-      display: inline-block; background: var(--ink); color: #fff; text-decoration: none;
-      font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 14px;
+      display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+      padding: 16px 30px; border-radius: 4px;
     }
-    .btn:hover { background: var(--accent); }
+    .btn:hover { background: #01251E; }
     .cta-note { font-size: 13px; color: var(--ink-soft); }
     .badge {
-      display: inline-block; background: var(--accent-soft); color: var(--ink);
-      border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; margin-bottom: 18px;
+      display: inline-block; border: 1px solid var(--gold); color: var(--ink);
+      border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;
     }
-    section { padding: 40px 0; border-top: 1px solid var(--line); }
-    h2 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
-    .step { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+    section { padding: 44px 0; border-top: 1px solid var(--line); }
+    h2 { font-family: var(--serif); font-size: 28px; font-weight: 500; margin-bottom: 22px; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .step { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 22px; }
     .step .n {
       display: inline-flex; align-items: center; justify-content: center;
-      width: 30px; height: 30px; border-radius: 999px; background: var(--accent-soft);
-      color: var(--accent); font-weight: 700; font-size: 14px; margin-bottom: 12px;
+      width: 30px; height: 30px; border-radius: 999px; background: var(--accent);
+      color: var(--gold-bright); font-weight: 700; font-size: 14px; margin-bottom: 12px;
     }
-    .step h3 { font-size: 16px; margin-bottom: 6px; }
+    .step h3 { font-family: var(--serif); font-size: 19px; font-weight: 500; margin-bottom: 6px; }
     .step p { font-size: 14px; color: var(--ink-soft); }
-    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-    .tier { border-radius: 20px; padding: 24px; border: 1px solid var(--line); background: var(--card); }
-    .tier.high { border-color: var(--gold); }
-    .tier h3 { font-size: 16px; margin-bottom: 6px; }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .tier { border-radius: 5px; padding: 24px; border: 1px solid var(--line); background: var(--card); }
+    .tier.high { border-color: var(--gold); background: var(--accent); }
+    .tier.high h3, .tier.high p { color: var(--cream); }
+    .tier.high h3 { color: var(--gold-bright); }
+    .tier h3 {
+      font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 8px; color: var(--ink);
+    }
     .tier p { font-size: 14px; color: var(--ink-soft); }
     .aesthetics { display: flex; flex-wrap: wrap; gap: 10px; }
     .chip {
-      background: var(--card); border: 1px solid var(--line); border-radius: 999px;
-      padding: 8px 16px; font-size: 14px; color: var(--ink);
+      border: 1px solid rgba(20,37,31,0.3); border-radius: 999px;
+      padding: 8px 16px; font-size: 12px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--ink);
     }
     footer { border-top: 1px solid var(--line); padding: 32px 0 48px; font-size: 13px; color: var(--ink-soft); }
-    footer a { color: var(--accent); text-decoration: none; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { color: #9c7736; }
     footer .links { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
   </style>
 </head>
@@ -69,11 +84,11 @@
 
     <div class="hero">
       <div class="badge">Launching first in the UAE 🇦🇪</div>
-      <h1>Your AI personal stylist.<br />Whole outfits, not just pieces.</h1>
+      <h1>Don't know what to wear?<br />We style the whole look.</h1>
       <p class="lede">
-        The Fit curates complete head-to-toe looks matched to your taste. Swipe through
-        outfits styled for you, save the ones you love, and shop every piece — at an
-        economical or a premium price point, from retailers you already trust.
+        The Fit is your AI personal stylist. Swipe through complete head-to-toe outfits
+        matched to your taste, save the ones you love, and shop every piece — at an
+        economical or a high-end price point, from retailers you already trust.
       </p>
       <div class="cta-row">
         <a class="btn" href="mailto:hello@thefit.style?subject=Waitlist&body=Count%20me%20in%20for%20early%20access.">Join the waitlist</a>
