@@ -86,6 +86,12 @@
     .how { padding-top: 20px; padding-bottom: 80px; }
     .how h2 { margin-bottom: 44px; }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 26px; }
+    .soon-tag {
+      display: inline-block; vertical-align: 2px; margin-left: 8px;
+      font-family: var(--sans); font-size: 10px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+      border: 1px solid var(--gold); border-radius: 999px; padding: 3px 9px;
+    }
     .step-icon {
       width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-mid);
       display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
@@ -217,8 +223,11 @@
         </div>
         <div class="step">
           <div class="step-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013E37" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M4 17l5-4 4 3 3-2 4 3"/></svg></div>
-          <h3>Recreate any look</h3>
-          <p>Saw a fit you love? Upload it and get it shoppable in your budget.</p>
+          <!-- Reverse styling is feature-flagged off for launch. When the
+               app flag flips on (README "Feature flags" in the-fit repo),
+               drop the tag and return this copy to present tense. -->
+          <h3>Recreate any look<span class="soon-tag">Coming soon</span></h3>
+          <p>Saw a fit you love? Soon you'll upload it and shop it in your budget.</p>
         </div>
       </div>
     </div>
